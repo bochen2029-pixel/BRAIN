@@ -6,7 +6,7 @@
 
 > The integrator that owns the **least intelligence** and the **most position.**
 
-**Status: v0.3 — a directional draft blueprint, pre-implementation.** A map. The only test of a map is walking one piece of the territory: *one node, built, on one real domain, holding for months.*
+**Status: v0.7 — published canon (directional; pre-implementation).** A map. The only test of a map is walking one piece of the territory: *one node, built, run head-to-head against a frontier model, winning on pennies.*
 
 ---
 
@@ -33,23 +33,21 @@ It is **scale- and industry-invariant**: the same kernel is a node in a 9-person
 
 **And — explicitly — BRAIN is not a [KEEL](https://github.com/bochen2029-pixel/keel) cell.** KEEL (my sovereign harness *substrate*) supplies closure **conditions** — routing, externalized correctness, memory, perception — and says of itself, correctly, *"not an agent and not a loop."* BRAIN is the **closure itself**: a distinct cognitive architecture that is **substrate-agnostic.** It can run on KEEL, on a few containers, or standalone on any chat-completions API. KEEL is one place it can live; it is not what BRAIN *is*.
 
-## The anatomy — seven organs, one loop
+## The anatomy — the minimal brain is five things
 
-Factored by **epistemic kind** (compute vs. judgment vs. ground-truth), not capability. Not a Mixture-of-Experts.
+The brain is **five load-bearing components.** Everything else you've heard it "needs" — a second self-modeling LLM, a learned neural "core" — is an *earned optimization*, added only after the five win the test below, and **none of them is the closer.**
 
-1. **Substrate / Compressors** — connectors + deterministic calculators + small specialist models + cheap reducers. They turn raw mess into *indicators*. (This is where the "non-LLM net" actually lives: plural and boring, not one mysterious net.)
-2. **Representation Space** — the typed, contract-bound state object the reasoner acts over. *Build it first; it's ~70% of the product.*
-3. **Integrator** — a *cheap* LLM role-playing the node; the only place raw "intelligence" sits, deliberately the cheapest part.
-4. **Critic** — a cheap model verification pass (catches drift/policy). A pass, *not* the closure.
-5. **Grounding Edge / Oracle** — a **non-model** assertion of correctness. The one organ that makes the loop a brain. *Only this closes the loop.*
-6. **Actuator** — tools; API/MCP where you own the system, computer-use at the ungoverned edges, with a reversibility gate.
-7. **Ledger + Monitor** — the spine: one artifact that is simultaneously the audit trail, the training data, and the staleness signal.
+1. **Compressors** — connectors + **deterministic calculators** (own every number) + cheap reducers (compress text/images into typed fields). The upstream intelligence; where the "non-LLM net" actually lives — plural and boring.
+2. **Representation** — the typed, contract-bound state object the reasoner acts over, every field stamped `{value, provenance, timestamp, confidence}`. *Build it first; it's ~70% of the product.* The self persists here, in text.
+3. **Integrator** — **one** cheap LLM, role-playing the node, constrained-decoded, mode-routed (selection ↔ hybrid ↔ generation). The only place raw "intelligence" sits, deliberately the cheapest part.
+4. **The Fence** — a **non-model**, deterministic assertion of correctness. The one component that makes the loop a brain. *Only this closes the loop* — a model checking a model is a *critic* (an earned extra), never the closer.
+5. **The Ledger** — the spine: one append-only artifact that is the audit trail, the (future) training data, and the staleness signal.
 
 ```
-perceive → ground → decide → critique → verify(non-model) → act → observe → record → update → ↻
+perceive → ground → decide → verify(non-model fence) → act | escalate → record → ↻
 ```
 
-The loop closes *on its own output* (the representation it reads next is the one its own action changed), which is what makes it self-grounding and terminates the homunculus regress.
+It closes *on its own output* — the representation it reads next is the one its own action changed — which makes it self-grounding and terminates the regress. **The earned additions** (a metacognitive *critic* pass; a small *drift/policy* head trained on the ledger — the genuine "non-LLM net," boring and advisory, *not* an "eigenqualia core"; a rich memory cortex; inter-brain coordination) are each Phase-2+, gated behind the head-to-head, and improve quality, never safety.
 
 ## Why it's cheap
 
@@ -61,7 +59,7 @@ Standing the loop up is a weekend. Keeping it coherent for **months without drif
 
 ## Read the full spec
 
-→ **[THE_BRAIN_ARCHITECTURE.md](./THE_BRAIN_ARCHITECTURE.md)** — the complete blueprint: the grounding edge, the representation space made literal, the confinement / anti-staleness engine, scale-invariance from SMB to enterprise, the flywheel and bootstrap, the staged falsifier-gated build plan, and the honest kill-list.
+→ **[THE_BRAIN_ARCHITECTURE.md](./THE_BRAIN_ARCHITECTURE.md)** — the complete v0.7 canon: the minimal five vs. the earned additions, the exact cheap-ladder routing, the representation made literal, the confinement engine, the **renaming test** (the anti-inflation discipline), the falsifier-gated build plan, the honest kill-list, and the functional-vs-phenomenal boundary.
 
 ## Lineage
 
